@@ -21,7 +21,7 @@ class University {
     private int facultyPopulation;
     private int facultyNum;
     private int departmentNum;
-    private ArrayList<String> facillities;
+    private ArrayList<String> facilities;
     public University() {
         name = "test";
         info = " lorem ipsum ";
