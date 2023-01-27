@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+       // System.out.println("Hello world!");
         University uni1 = new University();
         uni1.getName();
         uni1.getInfo();
@@ -11,6 +11,7 @@ public class Main {
         uni1.getFacultyPopulation();
         uni1.getFacultyNum();
         uni1.getDepartmentNum();
+        uni1.getFacilities();
     }
 }
 class University {
@@ -21,7 +22,7 @@ class University {
     private int facultyPopulation;
     private int facultyNum;
     private int departmentNum;
-    private ArrayList<String> facilities;
+    private String[] facilities;
     public University() {
         name = "test";
         info = " lorem ipsum ";
@@ -30,7 +31,8 @@ class University {
         facultyPopulation = 2222;
         facultyNum = 3333;
         departmentNum = 4444;
-    }
+        facilities = new String[]{"AAAA", "BBBB", "CCCC"};
+        }
     public void getName() {
         System.out.print(name);
     }
@@ -77,4 +79,7 @@ class University {
     public void setDepartmentNum(int departmentNum) {
         this.departmentNum = departmentNum;
     }
-}
+    public void getFacilities() {
+       System.out.print(facilities[0]+facilities[1]);
+        }
+    }
