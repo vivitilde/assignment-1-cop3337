@@ -2,32 +2,14 @@ public class Main {
     public static void main(String[] args) {
         //create default University and get all properties
         University uni1 = new University();
-        uni1.getName();
-        uni1.getInfo();
-        uni1.getEstablishmentYear();
-        uni1.getStudentPopulation();
-        uni1.getFacultyPopulation();
-        uni1.getFacultyNum();
-        uni1.getDepartmentNum();
-        uni1.getFacilityA();
-        uni1.getFacilityB();
-        uni1.getFacilityC();
+        uni1.getAll();
         //This is used to create a line between each University so that it remains clear which is which.
         //They also serve the important role of being cute.
         System.out.println("\nd(*⌒▽⌒*)b");
         //Creating a new instance of the University class through the second constructor
         //And subsequently getting all properties.
         University uni2 = new University("Kita High","with a long and storied history",2003,400,50,5,6,"Roof","Pool","Library");
-        uni2.getName();
-        uni2.getInfo();
-        uni2.getEstablishmentYear();
-        uni2.getStudentPopulation();
-        uni2.getFacultyPopulation();
-        uni2.getFacultyNum();
-        uni2.getDepartmentNum();
-        uni2.getFacilityA();
-        uni2.getFacilityB();
-        uni2.getFacilityC();
+        uni2.getAll();
         System.out.println("\nd(*⌒▽⌒*)b");
         //Setting all properties for the first University object and subsequently printing them
         uni1.setName("Genuine University");
@@ -40,16 +22,7 @@ public class Main {
         uni1.setFacilityA("Library");
         uni1.setFacilityB("Computer Lab");
         uni1.setFacilityC("3D Printer");
-        uni1.getName();
-        uni1.getInfo();
-        uni1.getEstablishmentYear();
-        uni1.getStudentPopulation();
-        uni1.getFacultyPopulation();
-        uni1.getFacultyNum();
-        uni1.getDepartmentNum();
-        uni1.getFacilityA();
-        uni1.getFacilityB();
-        uni1.getFacilityC();
+        uni1.getAll();
     }
 }
 //Defining Properties of the University class
@@ -78,7 +51,7 @@ class University {
         facilityC = "";
         }
         //Creating the second constructor which assigns properties the value of the parameters passed.
-        public University(String name, String info, int establishmentYear, int studentPopulation, int facultyPopulation, int facultyNum, int departmentNum,String facilityA, String facilityB, String facilityC) {
+        public University(String name, String info, int establishmentYear, int studentPopulation, int facultyPopulation, int facultyNum, int departmentNum,String facilityA,String facilityB,String facilityC) {
             this.name = name;
             this.info = info;
             this.establishmentYear = establishmentYear;
@@ -94,6 +67,19 @@ class University {
    //Creating all the getters and setters in pairs
    //The getters have a space appended to them for formatting reasons
    //The setters set the value of the property to the parameter passed to them.
+    public void getAll() {
+        getName();
+        getInfo();
+        getEstablishmentYear();
+        getStudentPopulation();
+        getFacultyPopulation();
+        getFacultyNum();
+        getDepartmentNum();
+        getFacilityA();
+        getFacilityB();
+        getFacilityC();
+    }
+
     public void getName() {
         System.out.print(name+" ");
     }
